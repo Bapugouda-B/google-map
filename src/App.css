@@ -9,13 +9,46 @@
   margin: 0 auto;
 }
 
-.map-container {
+.map-container{
+  position: relative;
+  background-color: red;
+
+}
+
+.map-content {
   width: 100%;
-  height: 400px;
+  height: 500px;
+  margin-bottom: 10px;
+}
+
+.cube {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+  background: linear-gradient(to right, #56569d, #514b9c, #2a2275);
+}
+
+.canvas-container {
+  height: 200px;
+}
+
+.canvas-container:focus {
+  outline: none;
+}
+
+.cuboid {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  bottom: 5%;
+  left: 40px;
 }
 
 .capture-button {
-  padding: 15px 30px;
+  width: 100%;
+  padding: 10px 0;
   background-color: #514b9c;
   color: white;
   font-size: large;
@@ -23,19 +56,17 @@
   border-radius: 5px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px 0px;
   cursor: pointer;
-  letter-spacing: 1px;
-  font-weight: 600;
+  letter-spacing: 2px;
 }
 
 .capture-button:hover {
-  background-color: rgb(33, 33, 200);
+  background-color: rgb(50, 50, 180);
 }
 
 .captured-images {
-  position: relative;
   display: flex;
-  justify-content: space-between;
-  gap: 10px;
+  justify-content: flex-start;
+  gap: 20px;
   border-radius: 5px;
   padding: 10px 20px;
   flex-wrap: wrap;
@@ -65,53 +96,33 @@
   background-color: #009cf9;
 }
 
-.canvas-container {
-  background: #0f0c29;
-  background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
-  background: linear-gradient(to right, #56569d, #514b9c, #2a2275);
 
-  border-radius: 10px;
-  height: 200px;
-}
-
-.canvas-container:focus {
-  outline: none;
-}
-
-.cuboid {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  bottom: 27%;
-  left: 60px;
-}
-
-/* Styles for mobile devices */
-@media (max-width: 480px) {
+@media (max-width: 468px) {
+  .canvas-container {
+    height: 150px;
+  }
+  
+  .canvas-container:focus {
+    outline: none;
+  }
+  
   .cuboid {
     position: absolute;
+    bottom: 2%;
     left: 20px;
-    bottom: 46%;
   }
-  .canvas-container {
-    height: 120px;
-  }
-  .capture-button {
-    padding: 5px 10px;
-    font-size: medium;
-    font-weight: 500;
-  }
-  .image-actions {
-    width: 160px;
-  }
-
- 
-
+.captured-images{
+  justify-content: space-between;
+}
   .captured-images img {
-    width: 160px;
+    width: 170px;
+  }
+  
+  .image-actions {
+    width: 170px;
   }
 }
+
+
 
 

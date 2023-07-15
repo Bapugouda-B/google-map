@@ -3,7 +3,6 @@ import "../App.css";
 import { GoogleMap, useLoadScript } from "@react-google-maps/api";
 import { googleMapsApiKey } from "../config.js";
 
-
 import BabylonMap from "./BabylonMap";
 
 function Map() {
@@ -73,17 +72,31 @@ function Map() {
 
   return (
     <div className="container">
-      <GoogleMap
-        mapContainerClassName="map-container"
-        center={center}
-        zoom={5}
-        options={{
-          gestureHandling: "greedy",
-        }}
-        onLoad={(map) => {
-          mapContainerRef.current = map;
-        }}
-      ></GoogleMap>
+      <div className="map-container">
+        <GoogleMap
+          mapContainerClassName="map-content"
+          center={center}
+          zoom={5}
+          options={{
+            gestureHandling: "greedy",
+          }}
+          onLoad={(map) => {
+            mapContainerRef.current = map;
+          }}
+        ></GoogleMap>
+
+        <div className="cuboid">
+          <div className="cube">
+            <BabylonMap
+              capturedImages={capturedImages}
+              onImageCaptured={handleCaptureImage}
+            />
+          </div>
+          <button onClick={handleCaptureImage} className="capture-button">
+            Capture Image
+          </button>
+        </div>
+      </div>
 
       <div className="captured-images">
         {capturedImages.map((image, index) => (
@@ -97,17 +110,6 @@ function Map() {
             </div>
           </div>
         ))}
-      </div>
-      <div className="cuboid">
-        <div className="cube">
-          <BabylonMap
-            capturedImages={capturedImages}
-            onImageCaptured={handleCaptureImage}
-          />
-        </div>
-          <button onClick={handleCaptureImage} className="capture-button">
-            Capture Image
-          </button>
       </div>
     </div>
   );
