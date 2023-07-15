@@ -25,3 +25,5 @@ yarn-error.log*
 #google-map-api-file
 config.js
 
+
+.vercel
