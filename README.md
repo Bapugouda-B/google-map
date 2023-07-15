@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+# React Maps with Babylon.js Integration
+![Project](https://logos-download.com/wp-content/uploads/2016/05/Google_Maps_logo_wordmark.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+This project combines a React application that utilizes the Google Maps API for displaying a map and capturing images, along with a Babylon.js scene for rendering a 3D cuboid with textures. The React component allows users to capture images of the map and stores them. The latest captured image is then used as a texture for the 3D box in the Babylon.js scene. This integration creates an immersive and interactive experience, showcasing the combination of mapping functionality with a 3D graphics library.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- Display a Google Maps instance within a React application.
+- Capture images of the map at the current view and store them.
+- Render a 3D cuboid using Babylon.js library.
+- Use the latest captured image as a texture for the 3D box.
+- View captured images, remove specific images, and open them in a new tab.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Installation
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Clone the repository:
 
-### `npm test`
+2. Navigate to the project directory:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. Install the dependencies: npm install
 
-### `npm run build`
+4. Obtain a Google Maps API key from the Google Cloud Console and replace "YOUR_API_KEY" with your API key in Map.js and BabylonMap.js files.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+5 Start the development server: npm start
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Usage
+1. The application will display a Google Maps instance centered at a predefined location.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Use the zoom and pan controls to navigate the map to the desired view.
 
-### `npm run eject`
+3. Click the "Capture Image" button to capture the current view of the map.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. The captured image will be added to the list of captured images below the map.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+5. Click the "View" button to open a captured image in a new tab.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+6. Click the "Cancel" button to remove a specific captured image from the list.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Technologies Used
+- React
+- Google Maps API
+- Babylon.js
+- react-google-maps/api
+- react-babylonjs
 
-## Learn More
+## Contributing
+Contributions are welcome! If you find any issues or would like to contribute enhancements, please submit a pull request.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Roadmap
+- Add additional features such as marker placement and interaction.
+- Enhance the 3D rendering with more complex models and materials.
+- Improve user interface and responsiveness.
+- Implement additional maps and data visualizations.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Contact
+- For any inquiries or feedback, please contact bapu12081996@gmail.com.
