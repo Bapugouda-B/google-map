@@ -22,7 +22,7 @@ This project combines a React application that utilizes the Google Maps API for 
 
 4. Obtain a Google Maps API key from the Google Cloud Console and replace "YOUR_API_KEY" with your API key in Map.js and BabylonMap.js files.
 
-5 Start the development server: npm start
+5. Start the development server: npm start
 
 ## Usage
 1. The application will display a Google Maps instance centered at a predefined location.
