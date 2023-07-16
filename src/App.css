@@ -115,11 +115,11 @@
   justify-content: space-between;
 }
   .captured-images img {
-    width: 170px;
+    width: 160px;
   }
   
   .image-actions {
-    width: 170px;
+    width: 160px;
   }
 }
 
